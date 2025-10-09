@@ -78,6 +78,13 @@ nova_tabela<-relatorio_vendas %>%
   group_by(Ano)%>%
   summarise(soma_medias=sum(media_por_ano))
 
+media_tabela<- nova_tabela %>%
+  group_by(Ano) %>%
+  summarise(media_geral = (soma_medias/18))
+
+
+
+
 # Instalando cores estat
 cores_estat <- c(
   "#A11D21", "#003366", "#663333", "#CC9900", "#006606",
@@ -112,10 +119,12 @@ theme_estat <- function(...) {
 }
 
 # Criando o gráfico com a nova_tabela com as variaveis Ano e soma_medias
-ggplot(nova_tabela) +
-  aes(x = Ano, y = soma_medias, group = 1) +
+ggplot(media_tabela) +
+  aes(x = Ano, y = media_geral, group = 1) +
   geom_line(size = 1, colour = "#A11D21") +
   geom_point(colour = "#A11D21", size = 2) +
   labs(x = "Ano", y = "Media") +
-  theme_estat()
+  theme_estat() +
+  scale_x_continuous(breaks = seq(1880, 1889, by = 1))
+
 
