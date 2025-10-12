@@ -1,6 +1,8 @@
 ---
 # Nome do arquivo PDF gerado na pasta resultado
 output-file: "Entrega 1"
+author: " Maria Clara Muniz Padue"
+date: "07/10/2025"
 ---
 
 ```{r setup}
@@ -12,69 +14,32 @@ source("rdocs/entrega_1.R")
 # Rodar apenas uma vez na vida!
 ## Instalando o tinytex(pacote apenas)
 ### CRAN version
-install.packages('tinytex')
+##install.packages('tinytex')
 
 
 ## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
+##library(tinytex)
+##tinytex::install_tinytex()
 ```
 
-# Objetivo
+```{r}
+#| label: fig-grafico_media
+#| fig-cap: "Gráfico"
+grafico_media
 
-Esse template foi criado para o alocado conseguir observar como ficaria sua análise o arquivo principal. É daqui que o gerente de projetos irá copiar a análise e inserir no documento principal que gerará o relatório estatístico.
 
+
+```
 # Análises
 
 ## Análise 1
 
+A receita média das lojas aumentam gradualmente entre os anos de 1880 a 1889. Sendo o ano de pior média, o primeiro, e o de melhor média, o último.Conclui-se que houve um aumento na quantidade de receita produzida média ao longo do tempo.
+
 ## Análise 2
 
-```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
+A receita total média aumentou disparadamente de 1888 para 1889 comparado aos anos anteriores. 
 
-
-
-```
-
-
-::: {#quad- layout-align="center" quad-pos="H"}
-```{=latex}
-
-
-
-```
-
-Medidas resumo da 
-:::
-
-
-
-::: {#tbl-modalidades layout-align="center" tbl-pos="H"}
-```{=latex}
-
-
-```
-
-
-:::
-
-
-
-
-$\ref{fig-}$
-
-[@tbl-]
-
-
-[**Quadro** @quad-]
-
-
-
-
-
-
-
+Por fim, a estratégia de produção e venda dessas lojas está dando certo, e só aumentando o lucro delas ao longo dos anos. Por isso, elas devem manter, pois está dando certo.
 
 
