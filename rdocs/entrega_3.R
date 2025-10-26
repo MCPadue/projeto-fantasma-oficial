@@ -23,6 +23,7 @@ source("rdocs/source/packages.R")
 # as funções dos pacotes contidos no Tidyverse para realizar suas análises.
 # ---------------------------------------------------------------------------- #
 
+
 ## Teremos que trabalhar com CityID(Ambar Seco), Age:infos_clientes,StoreID:infos_lojas
 
 ## Primeira coisa, vamos organizar os nomes
@@ -45,9 +46,11 @@ infos_cidades<-infos_cidades %>%
 ## 2- fazemos a mesma coisa com tabela_organizar e relatorio_vendas e tabela_organizar e infos_clientes
 ## 3- criamos uma nova tabela, filtrando a tabela_organizar apenas para ambar seco, a partir de filter.
 
+new_relatorio_vendas<- relatorio_vendas
+
 tabela_organizar<- inner_join(infos_cidades,infos_lojas,by="CityID")
 
-tabela_organizar<-inner_join(tabela_organizar,relatorio_vendas,by="StoreID")
+tabela_organizar<-inner_join(tabela_organizar,new_relatorio_vendas,by="StoreID")
 tabela_organizar<-inner_join(tabela_organizar,infos_clientes,by="ClientID")
 
 tabela_organizar_filtrada <- tabela_organizar %>%
@@ -60,7 +63,7 @@ tabela_organizar_filtrada <- tabela_organizar %>%
   
 
 
-## O gráfico mais adequado será um boxplot bivariado, pois queremos saber omo as idades dos clientes variam dependendo da loja.
+## O gráfico mais adequado será um boxplot bivariado, pois queremos saber como as idades dos clientes variam dependendo da loja.
 
 install.packages("ggplot2")
 library(ggplot2)

@@ -8,72 +8,45 @@ output-file: "Entrega 3"
 source("rdocs/entrega_3.R")
 ```
 
+
+# Introdução
+
+O objetivo das análises realizadas foi entender o perfil etário dos clientes das lojas de Âmbar Seco, buscando identificar características no público atendido por cada estabelecimento, identificando suas diferenças.Assim, a análise identifica a distribuição das idades dos consumidores, observando variações entre as lojas, o que pode ajudar comercialmente.
+
+As variáveis usadas foram Idade do cliente, quantitativa contínua, e Loja, qualitativa nominal. Partindo dessas variáveis, foi feito um gráfico boxplot bivariado, permitindo visualizar a dispersão, a mediana, os quartis e os valores extremos das idades em cada loja.
+
+Analisando os resultados, é possível compreender melhor as características do público de cada loja, indicando perfis distintos de consumidores.
+
+
+
 ```{r}
-# Rodar apenas uma vez na vida!
-## Instalando o tinytex(pacote apenas)
-### CRAN version
-install.packages('tinytex')
+#| label: fig-grafico_ambarseco
+#| fig-cap: "Gráfico Perfis das Idades dos Clientes por Loja — Âmbar Seco"
+grafico_ambarseco
 
 
-## Baixando o tinytex
-library(tinytex)
-tinytex::install_tinytex()
+
 ```
 
-
-
-
-# Objetivo
-
-Esse template foi criado para o alocado conseguir observar como ficaria sua análise o arquivo principal. É daqui que o gerente de projetos irá copiar a análise e inserir no documento principal que gerará o relatório estatístico.
 
 # Análises
 
-## Análise 5
+## Introdução das análises
 
-## Análise 6
+O gráfico apresentado mostra a distribuição das idades dos clientes de quatro lojas na cidade de Âmbar Seco: Ferraria Seca, Banco Careca, Saloon e Vendinha Rápida,a partir de boxplots. Esse tipo de representação permite observar de forma clara a tendência central, dispersão e assimetria dos dados, além de representar de valores extremos (outliers).
 
-```{r}
-#| label: fig-
-#| fig-cap: "Gráfico "
+## Análise 5 - Estatísticas descritivas
 
+A loja Ferraria Seca apresenta a maior dispersão entre as idades,mostrando um público diversificado, que agrupa tanto clientes jovens quanto pessoas mais velhas. A média de idade se aproxima de 33 anos, enquanto a mediana de 30 anos. Esse comportamento permite a presença de alguns clientes mais velhos, elevando a média.
 
+A loja Banco Careca apresenta uma distribuição menos diversificada, sendo a media e mediana próximas, as duas em torno de 34 a 35 anos.Indicando um público concentrado em adultos. A dispersão é menor do que na Ferraria Seca, mostrando uma maior estabilidade de perfil dos clientes.
 
-```
+Na loja Saloon, a média é pouco inferior à mediana,sendo próxima de 35.Sugerindo a predominância de clientes mais jovens-adultos. A variabilidade das idades é razoável, assim como a do Banco Careca.
 
-
-::: {#quad- layout-align="center" quad-pos="H"}
-```{=latex}
+Por fim, a Vendinha Rápida tem média e mediana mais elevadas, próximas de 40 anos, indicando que seu público é de clientes mais velhos. Observa-se a presença de alguns clientes mais idosos. Além disso, a dispersão é menor, tendendo a ter um grupo mais definido.
 
 
 
-```
+## Conclusão
 
-Medidas resumo da 
-:::
-
-
-
-::: {#tbl-modalidades layout-align="center" tbl-pos="H"}
-```{=latex}
-
-
-```
-
-
-:::
-
-
-
-
-$\ref{fig-}$
-
-[@tbl-]
-
-
-[**Quadro** @quad-]
-
-
-
-
-
+Conclui-se que a faixa etária dos clientes varia entre 20 a 80 anos,havendo diferenças entre as lojas.A Ferraria Seca apresenta um público diverso, com predominância de adultos jovens, mas também há faixas etárias mais altas. O Banco Careca possui um público mais balanceado, havendo mais clientes entre 30 e 40 anos. Já a Saloon atende clientes mais jovens, com menor variabilidade nas idades. No entanto, a Vendinha Rápida atende um público mais velho.
